@@ -12,9 +12,9 @@ The Light Weight app is a project which is was born out of the idea of creating 
 
 ## 📝 Project Requirement
 
-MoneyPal is a fictitous marketplace system where user have offers and request for services. Users have a virtual wallet where they can credit their wallets from within the system. 
+MoneyPal is a fictitous marketplace system where user have offers and request for services. Users have a virtual wallet where they can credit their wallets from within the system
 
-The goal of this mini project is to build a backend services using the microservice architecture to facilitate transfer of money from a wallet to another wallet. Note that, the said system should have a `user service`, `payment service`, `billing service`, and a `wallet service` respectively. 
+The goal of this mini project is to build a backend services using the microservice architecture to facilitate transfer of money from a wallet to another wallet. Note that, the said system should have a `user service`, `payment service`, `billing service`, and a `wallet service` respectively.
 
 ### Technical Requirement:
 
@@ -50,17 +50,19 @@ Please feel free to use any of the technologies listed below:
 - Python (Any Python stack)
 
 ### Database
-- MongoDB 
+
+- MongoDB
 - MySQL
 - PostGre SQL
 
 ### Messaging
+
 - Apache Kafka
 - Rabbit MQ
 
 ### Others
-- Docker
 
+- Docker
 
 ### Frontend
 
