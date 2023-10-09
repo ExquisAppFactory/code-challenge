@@ -34,11 +34,6 @@ the system, ensuring that services are available at scale.
 - Each service should be independent. They should be capable of operating separately and be consumed independently.
 - Expose well-documented API endpoints for all services.
 
-### Functional Requirement:
-- Users should be able to fund their wallets with mock transactions.
-- Users' wallets should be debited when they send an invoice.
-- The platform's wallet (service provider) should be credited with service fees.
-
 ### Frontend
 
 - Develop a responsive web-based interface.
