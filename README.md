@@ -2,58 +2,56 @@
 	<img alt="Discord logo" src="https://github.com/ExquisAppFactory/lightweight/blob/master/assets/monorepo.svg" height="150px" width="150px" />
 </h1>
 
-<h3 align="center">
-  Light Weight App architecture
-</h3>
+<h2 align="center">
+  Invoice Management System
+</h2>
 
-## 📝 Project Requirement
+### 📝 Project Requirement
 
 Since Covid-19, there has been a surge in online businesses. Business owners need an easy way to send invoice to their customers.
 Your starup needs to provide a service that sends invoices to customers. You will be using the microservice architecture to architect
 the system, ensuring that services are available at scale.
 
-## User Service
+### User Service
 
-You can use a third party authentication service to create a user service for your application
+- Integrate third-party authentication for user sign-up and login (e.g., Auth0, Firebase Auth).
+- Maintain user profiles with necessary details (e.g., name, email, wallet balance).
 
-## Invoice service
+### Invoice service
 
-Create an Invoice service that accepts necessary information. This service can generate a pdf version of the invoice with a defined template.
+- Accept and store invoice-related details from users.
+- Generate a downloadable PDF version of the invoice based on a predefined template.
 
-## Email Service
+### Email Service
 
-Create a service that accepts the necessary information and sends emails. It should provide an abstraction between two different email service providers. If one of the services goes down, your service can quickly failover to a different provider without affecting your customers.
-
-Example Email Providers:
-
-1. SendGrid - [Simple Send Documentation](https://sendgrid.com/docs/API_Reference/Web_API/mail.html)
-2. Mailgun - [Simple Send Documentation](http://documentation.mailgun.com/quickstart.html#sending-messages)
-3. SparkPost - [Developer Hub](https://developers.sparkpost.com/)
-4. Amazon SES - [Simple Send Documentation](http://docs.aws.amazon.com/ses/latest/APIReference/API_SendEmail.html)
-
-All listed services are free to try and are pretty painless to sign up for, so please register your own test accounts on each.
+- Accept invoice details and recipient email.
+- Provide an abstraction layer over multiple email service providers. If one fails, it should transparently switch to another.
+- Recommended Email Providers: [SendGrid](https://sendgrid.com/docs/API_Reference/Web_API/mail.html), [Mailgun](http://documentation.mailgun.com/quickstart.html#sending-messages), [SparkPost](https://developers.sparkpost.com/), [Amazon SES](http://docs.aws.amazon.com/ses/latest/APIReference/API_SendEmail.html).
 
 ### Technical Requirement:
 
-- Use third party Auth to handle user authentication
-- Services should be granulated and be standalone. For example I should be able to user the Invoice service without the Email or User Service
-  Likewise, I should be able to use the Email service independently
-- Send Invoices to Customers via the Email service
-- Expose API endpoints of all the microservices
+- Use third-party authentication for user handling.
+- Each service should be independent. They should be capable of operating separately and be consumed independently.
+- Expose well-documented API endpoints for all services.
 
 ### Functional Requirement:
-
-- Users should be able to fund their wallets by making payment online (please feel free to use a mock payment)
-- Users wallet are expected to be debited when they pay for a service
-- Service provide's wallet is to be credited with the service charge collected from customers
+- Users should be able to fund their wallets with mock transactions.
+- Users' wallets should be debited when they send an invoice.
+- The platform's wallet (service provider) should be credited with service fees.
 
 ### Frontend
 
-- You are expected to build a simple but responsive UI to consume the APIs
+- Develop a responsive web-based interface.
+- Allow users to:
+    - Register and log in.
+    - Add funds to their wallets.
+    - Create, view, and send invoices.
+    - Track their wallet's transaction history.
+    - View the status of sent emails (e.g., sent, delivered, failed).
 
 ## 🚀 Technologies
 
-Please feel free to use any of the technologies listed below:
+You can use any of the languange or technology listed below unless otherwise stated:
 
 ### Backend
 
@@ -67,11 +65,6 @@ Please feel free to use any of the technologies listed below:
 - MySQL
 - PostGre SQL
 
-### Messaging
-
-- Apache Kafka
-- Rabbit MQ
-
 ### Others
 
 - Docker
@@ -81,21 +74,24 @@ Please feel free to use any of the technologies listed below:
 - React
 - Angular
 
+## **Additional Suggestions:**
+
+- Include logging to track failures or errors in the system.
+- Set up CI/CD pipelines using `Github actions`
+- Use containerization (e.g., Docker, Docker Compose) for services to ensure a consistent development and deployment environment.
+
 ## ✅ Accessment Criteria
 
-- Good file structure and naming convention
-- Your code must be unit tested both on the backend and frontend
-- You are expected to containerize using the app `Docker`
-- Application should be deployed to `AWS`
-- Set up CI/CD pipelines using `Github actions`
-- There should a proper `README` on your project
+1. API Design: Clear, consistent, and documented API endpoints.
+2. Code Quality: Clean, maintainable, and efficient code.
+3. System Design: Scalable and resilient system architecture.
+4. Error Handling: Robust handling of possible failures and errors.
+5. Unit tests both on the backend and frontend
 
-## 🤔 How to contribute
+## Instruction
+Fork this repository
+All your changes should be made in a private fork of this repository. When you're done please, please:
 
-**Follow the steps below**
+Share your fork with the `exquis-test` user (Settings -> Collaborators -> Add People)
 
-```bash
-> Clone your fork and make it private
-
-> When you are done with the work share it  with the following address
-```
+Reply to the email that asked you to do this API exercise, with a link to the repository that the exquis-test user now should have access to.
