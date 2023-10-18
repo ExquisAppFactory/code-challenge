@@ -87,6 +87,6 @@ You can use any of the languange or technology listed below unless otherwise sta
 Fork this repository
 All your changes should be made in a private fork of this repository. When you're done please, please:
 
-Share your fork with the `exquis-test` user (Settings -> Collaborators -> Add People)
+Share your fork with the `exquisapp` user (Settings -> Collaborators -> Add People)
 
 Reply to the email that asked you to do this API exercise, with a link to the repository that the exquis-test user now should have access to.
